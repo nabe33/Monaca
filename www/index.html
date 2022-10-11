@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    let today = new Date();
+    let birthday = new Date('1958/7/19');
+    let diff = (today.getTime() -birthday.getTime()) /(1000 * 60 * 60 * 24);
+
+    let weekday = birthday.getDay();
+    let week = ["日", "月", "火", "水", "木", "金", "土"];
+
+    document.write("<p>今日はお誕生日から" + Math.floor(diff) + "日後です</p>");
+    document.write("<p>お誕生日は" + week[weekday] + "曜日です</p>");
+    </script>
+</head>
+<body>
+<h1>Dateオブジェクトの練習例</h1>
+</body>
+</html>
